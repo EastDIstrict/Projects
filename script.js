@@ -17,11 +17,11 @@ document.getElementById('messageForm').addEventListener('submit', function(e) {
         return;
     }
     
-    messageDiv.innerHTML = '<div class="message success">Сообщение успешно отправлено!</div>';
+    messageDiv.innerHTML = `
+        <div class="message success" style="background-color: #e8f5e9; border: 1px solid #c8e6c9; padding: 15px; border-radius: 8px; font-size: 16px; color: #2e7d32;">
+            Здравствуй, ${name}! Спасибо за твой комментарий: "${comment}". Мы свяжемся с тобой по адресу: ${email}
+        </div>
+    `;
     
     document.getElementById('messageForm').reset();
-    
-    setTimeout(() => {
-        messageDiv.innerHTML = '';
-    }, 3000);
 });
